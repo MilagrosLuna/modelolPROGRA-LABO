@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Modelo Primer Parcial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <!-- AGREGAR ARCHIVOS JS AQUI -->
+  <script src="./persona.js"></script>    
+  <script src="./usuario.js"></script>  
+ <script src="./ajax.js"></script>
+ <script src="./manejadora.js"></script>
+
+</head>
+
+<body style="background-color:darkgrey">
+ <br>
+  <div class="container" style="background-color:lightblue">
+    <br>
+    <h2 style="background-color:gray;color:ghostwhite">Apellido y nombre del alumno</h2>
+
+    <h4>ABM - Usuarios</h4>
+
+      <table class="table table" style="width:95%">
+        <tr>
+          <td style="width:50%">
+            <table class="table table-bordered table-hover" style="background-color:rgb(195, 199, 202)">
+              <tr>
+                <td><label class="col control-label">Id</label></td>
+                <td><input type="text" id="id" readonly /></td>
+              </tr>
+              <tr>
+                <td><label class="col control-label">Nombre</label></td>
+                <td><input type="text" id="nombre" /></td>
+              </tr>
+              <tr>
+                <td><label class="col control-label">Correo</label></td>
+                <td><input type="text" id="correo" /></td>
+              </tr>
+              <tr>
+                <td><label class="col control-label">Clave</label></td>
+                <td><input type="password" id="clave" /></td>
+              </tr>
+              <tr>
+                <td><label class="col control-label">Perfil</label></td>
+                <td><select id="cboPerfiles" style="max-width:190px;min-width:180px" > 
+                    <option value="1">Administrador</option>
+                    <option value="2">Empleado</option>
+                    <option value="3">Supervisor</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" class="col">
+                  <input type="button" value="Agregar" id="btn-agregar" class="btn btn-success" onclick="ModeloParcial.Manejadora.AgregarUsuario()" />
+                  <input type="button" value="Verificar" class="btn btn-light" onclick="ModeloParcial.Manejadora.VerificarUsuarioJSON()" />
+                  <input type="button" value="Mostrar" class="btn btn-info" onclick="ModeloParcial.Manejadora.MostrarUsuarios()" />    
+                  <input type="button" value="Modificar" id="btn-modificar" class="btn btn-dark" onclick="" />
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <div class="" style="background-color:lavenderblush;">
+              <div id="divTabla">
+                tabla aqu&iacute;...
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    <input type="hidden" id="hdnIdModificacion">
+    
+  </div>
+</body>
+
+</html>
